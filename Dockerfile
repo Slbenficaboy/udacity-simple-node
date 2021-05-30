@@ -4,6 +4,10 @@ FROM node:13
 # Create app directory
 WORKDIR /usr/src/app
 
+# Configure variables
+ARG FAVORITE_TEAM
+ENV FAVORITE_TEAM=$FAVORITE_TEAM
+
 # Install app dependencies by copying
 # package.json and package-lock.json
 COPY package*.json ./
