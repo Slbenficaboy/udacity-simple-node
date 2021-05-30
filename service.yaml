@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-udacity-app
+  labels:
+    run: my-udacity-app
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: my-udacity-app
